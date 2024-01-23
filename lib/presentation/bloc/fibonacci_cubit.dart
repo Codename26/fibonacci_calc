@@ -24,6 +24,9 @@ class FibonacciCubit extends Cubit<FibonacciState> {
     }
   }
 
+  ///Checks if a given number is a Fibonacci number. It uses the compute()
+  ///function from the Flutter foundation package to perform the calculation on
+  ///a background isolate, which helps to keep the UI responsive.
   Future<bool> _checkIfFibonacci(int number) async {
     return await compute(isFibonacci, number);
   }
